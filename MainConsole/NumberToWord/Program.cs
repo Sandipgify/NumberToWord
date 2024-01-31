@@ -1,7 +1,15 @@
-﻿using NumberToWordRepresentation;
+﻿using NumberToWordRepresentation.CurrencyConversion;
+using NumberToWordRepresentation.FormatConversion;
 
 double intdata = 123456;
-double inputdata = 123456.0999;
-var result = inputdata.ToWordsEnglish();
-Console.WriteLine(result);
-Console.WriteLine(intdata.ToWordsEnglish());
+double decimaldata = 123456.0989;
+
+Console.WriteLine(intdata.ToOtherFormat());
+Console.WriteLine(decimaldata.ToOtherFormat());
+Console.WriteLine(intdata.NepaliNumberFormat());
+Console.WriteLine(decimaldata.NepaliNumberFormat());
+Console.WriteLine(intdata.NepaliCurrency());
+Console.WriteLine(decimaldata.NepaliCurrency());
+Console.WriteLine(intdata.OtherCurrency());
+Console.WriteLine(decimaldata.OtherCurrency());
+
